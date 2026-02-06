@@ -5,13 +5,13 @@
  * Time: 10:35
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol;
 
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Client;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\BadResponseException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Client;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\BadResponseException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 class HttpClient
 {
@@ -55,10 +55,12 @@ class HttpClient
 
     /**
      * @param Client $client
+     * @return self
      */
-    public function setClient(Client $client)
+    public function setClient(Client $client): self
     {
         $this->client = $client;
+        return $this;
     }
 
     /**

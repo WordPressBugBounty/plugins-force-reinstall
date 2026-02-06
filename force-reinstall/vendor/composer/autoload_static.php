@@ -4,22 +4,22 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726
+class ComposerStaticInitdd3dbddbe62796abf5f22e368aaf609d
 {
     public static $prefixLengthsPsr4 = array (
-        'R' => 
+        'R' =>
         array (
-            'Rich4rdMuvirimi\\ForceReinstall\\Vendor\\' => 38,
-            'Rich4rdMuvirimi\\ForceReinstall\\' => 31,
+            'RichardMuvirimi\\ForceReinstall\\Vendor\\' => 38,
+            'RichardMuvirimi\\ForceReinstall\\' => 31,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Rich4rdMuvirimi\\ForceReinstall\\Vendor\\' => 
+        'RichardMuvirimi\\ForceReinstall\\Vendor\\' =>
         array (
             0 => __DIR__ . '/..' . '/force-reinstall/psr-4',
         ),
-        'Rich4rdMuvirimi\\ForceReinstall\\' => 
+        'RichardMuvirimi\\ForceReinstall\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -29,9 +29,24 @@ class ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'ForceReinstall_AllowDynamicProperties' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php82/Resources/stubs/AllowDynamicProperties.php',
         'ForceReinstall_Attribute' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'ForceReinstall_CURLStringFile' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
         'ForceReinstall_ClientIP' => __DIR__ . '/..' . '/force-reinstall/classes/yidas/client-ip/src/ClientIP.php',
+        'ForceReinstall_DateError' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateError.php',
+        'ForceReinstall_DateException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateException.php',
+        'ForceReinstall_DateInvalidOperationException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
+        'ForceReinstall_DateInvalidTimeZoneException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateInvalidTimeZoneException.php',
+        'ForceReinstall_DateMalformedIntervalStringException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateMalformedIntervalStringException.php',
+        'ForceReinstall_DateMalformedPeriodStringException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateMalformedPeriodStringException.php',
+        'ForceReinstall_DateMalformedStringException' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateMalformedStringException.php',
+        'ForceReinstall_DateObjectError' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateObjectError.php',
+        'ForceReinstall_DateRangeError' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/DateRangeError.php',
+        'ForceReinstall_Deprecated' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php84/Resources/stubs/Deprecated.php',
+        'ForceReinstall_NoDiscard' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php85/Resources/stubs/NoDiscard.php',
+        'ForceReinstall_Override' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/Override.php',
         'ForceReinstall_PhpToken' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'ForceReinstall_ReflectionConstant' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php84/Resources/stubs/ReflectionConstant.php',
         'ForceReinstall_ReturnTypeWillChange' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
+        'ForceReinstall_SQLite3Exception' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
         'ForceReinstall_SensitiveParameter' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php82/Resources/stubs/SensitiveParameter.php',
         'ForceReinstall_SensitiveParameterValue' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php82/Resources/stubs/SensitiveParameterValue.php',
         'ForceReinstall_Stringable' => __DIR__ . '/..' . '/force-reinstall/classes/symfony/polyfill-php80/Resources/stubs/Stringable.php',
@@ -48,9 +63,9 @@ class ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit3520ddb1e8287a80a1ad1e8646ed1726::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdd3dbddbe62796abf5f22e368aaf609d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdd3dbddbe62796abf5f22e368aaf609d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitdd3dbddbe62796abf5f22e368aaf609d::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * Provides methods to determine if a modified URL should be considered cross-origin.

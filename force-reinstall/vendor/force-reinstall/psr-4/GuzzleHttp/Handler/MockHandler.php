@@ -1,16 +1,16 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\RequestException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\HandlerStack;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\TransferStats;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\RequestException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\HandlerStack;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\TransferStats;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
 
 /**
  * Handler that returns responses or throw exceptions from a queue.
@@ -52,21 +52,21 @@ class MockHandler implements \Countable
      * @param callable|null $onFulfilled Callback to invoke when the return value is fulfilled.
      * @param callable|null $onRejected  Callback to invoke when the return value is rejected.
      */
-    public static function createWithMiddleware(array $queue = null, callable $onFulfilled = null, callable $onRejected = null): HandlerStack
+    public static function createWithMiddleware(?array $queue = null, ?callable $onFulfilled = null, ?callable $onRejected = null): HandlerStack
     {
         return HandlerStack::create(new self($queue, $onFulfilled, $onRejected));
     }
 
     /**
      * The passed in value must be an array of
-     * {@see \Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface} objects, Exceptions,
+     * {@see ResponseInterface} objects, Exceptions,
      * callables, or Promises.
      *
      * @param array<int, mixed>|null $queue       The parameters to be passed to the append function, as an indexed array.
      * @param callable|null          $onFulfilled Callback to invoke when the return value is fulfilled.
      * @param callable|null          $onRejected  Callback to invoke when the return value is rejected.
      */
-    public function __construct(array $queue = null, callable $onFulfilled = null, callable $onRejected = null)
+    public function __construct(?array $queue = null, ?callable $onFulfilled = null, ?callable $onRejected = null)
     {
         $this->onFulfilled = $onFulfilled;
         $this->onRejected = $onRejected;
@@ -200,7 +200,7 @@ class MockHandler implements \Countable
     private function invokeStats(
         RequestInterface $request,
         array $options,
-        ResponseInterface $response = null,
+        ?ResponseInterface $response = null,
         $reason = null
     ): void {
         if (isset($options['on_stats'])) {

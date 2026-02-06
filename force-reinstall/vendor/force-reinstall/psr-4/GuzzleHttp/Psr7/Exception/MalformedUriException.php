@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Exception;
 
 use InvalidArgumentException;
 

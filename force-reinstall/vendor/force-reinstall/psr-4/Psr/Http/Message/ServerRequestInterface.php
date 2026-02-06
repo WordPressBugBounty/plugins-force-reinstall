@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
 
 /**
  * Representation of an incoming, server-side HTTP request.
@@ -126,7 +126,7 @@ interface ServerRequestInterface extends RequestInterface
      * Retrieve normalized file upload data.
      *
      * This method returns upload metadata in a normalized tree, with each leaf
-     * an instance of Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileInterface.
+     * an instance of RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileInterface.
      *
      * These values MAY be prepared from $_FILES or the message body during
      * instantiation, or MAY be injected via withUploadedFiles().

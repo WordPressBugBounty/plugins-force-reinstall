@@ -5,12 +5,12 @@
  * Time: 12:23
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Common;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Common;
 
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\HydratableInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum\ValidationCode;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\HydratableInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum\ValidationCode;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 class ValidationMessage implements HydratableInterface
 {

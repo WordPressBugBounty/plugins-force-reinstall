@@ -5,10 +5,10 @@
  * Time: 13:56
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\ExportableInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\ValidateInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\ExportableInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\ValidateInterface;
 
 abstract class AbstractParameter implements ExportableInterface, ValidateInterface
 {

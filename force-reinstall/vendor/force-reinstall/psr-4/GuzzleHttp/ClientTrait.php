@@ -1,11 +1,11 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\GuzzleException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\GuzzleException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * Client interface for sending HTTP requests.

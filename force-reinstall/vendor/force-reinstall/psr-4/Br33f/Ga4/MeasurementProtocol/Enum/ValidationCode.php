@@ -5,7 +5,7 @@
  * Time: 13:49
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum;
 
 class ValidationCode
 {

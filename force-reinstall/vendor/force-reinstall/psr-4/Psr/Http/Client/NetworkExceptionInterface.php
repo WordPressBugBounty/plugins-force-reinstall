@@ -1,8 +1,8 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 /**
  * Thrown when the request cannot be completed because of network issues.

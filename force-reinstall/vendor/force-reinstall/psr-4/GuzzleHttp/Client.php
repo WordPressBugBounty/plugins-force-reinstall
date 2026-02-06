@@ -1,20 +1,20 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie\CookieJar;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\GuzzleException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\InvalidArgumentException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie\CookieJar;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\GuzzleException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\InvalidArgumentException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * @final
  */
-class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\ClientInterface
+class Client implements ClientInterface, \RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\ClientInterface
 {
     use ClientTrait;
 
@@ -41,7 +41,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      * - handler: (callable) Function that transfers HTTP requests over the
      *   wire. The function is called with a Psr7\Http\Message\RequestInterface
      *   and array of transfer options, and must return a
-     *   Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface that is fulfilled with a
+     *   RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface that is fulfilled with a
      *   Psr7\Http\Message\ResponseInterface on success.
      *   If no handler is provided, a default handler will be created
      *   that enables all of the request options below by attaching all of the
@@ -52,7 +52,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      *
      * @param array $config Client configuration settings.
      *
-     * @see \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions for a list of available request options.
+     * @see RequestOptions for a list of available request options.
      */
     public function __construct(array $config = [])
     {
@@ -96,7 +96,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      * Asynchronously send an HTTP request.
      *
      * @param array $options Request options to apply to the given
-     *                       request and to the transfer. See \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
+     *                       request and to the transfer. See \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
      */
     public function sendAsync(RequestInterface $request, array $options = []): PromiseInterface
     {
@@ -113,7 +113,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      * Send an HTTP request.
      *
      * @param array $options Request options to apply to the given
-     *                       request and to the transfer. See \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
+     *                       request and to the transfer. See \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
      *
      * @throws GuzzleException
      */
@@ -148,7 +148,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      *
      * @param string              $method  HTTP method
      * @param string|UriInterface $uri     URI object or string.
-     * @param array               $options Request options to apply. See \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
+     * @param array               $options Request options to apply. See \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
      */
     public function requestAsync(string $method, $uri = '', array $options = []): PromiseInterface
     {
@@ -178,7 +178,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      *
      * @param string              $method  HTTP method.
      * @param string|UriInterface $uri     URI object or string.
-     * @param array               $options Request options to apply. See \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
+     * @param array               $options Request options to apply. See \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
      *
      * @throws GuzzleException
      */
@@ -321,7 +321,7 @@ class Client implements ClientInterface, \Rich4rdMuvirimi\ForceReinstall\Vendor\
      * The URI of the request is not modified and the request options are used
      * as-is without merging in default options.
      *
-     * @param array $options See \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
+     * @param array $options See \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\RequestOptions.
      */
     private function transfer(RequestInterface $request, array $options): PromiseInterface
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 interface CurlFactoryInterface
 {

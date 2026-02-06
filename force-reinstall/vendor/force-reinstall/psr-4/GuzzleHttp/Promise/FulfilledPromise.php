@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * A promise that has been fulfilled.
@@ -31,8 +31,8 @@ class FulfilledPromise implements PromiseInterface
     }
 
     public function then(
-        callable $onFulfilled = null,
-        callable $onRejected = null
+        ?callable $onFulfilled = null,
+        ?callable $onRejected = null
     ): PromiseInterface {
         // Return itself if there is no onFulfilled function.
         if (!$onFulfilled) {

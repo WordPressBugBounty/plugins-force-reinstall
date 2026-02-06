@@ -5,13 +5,13 @@
  * Time: 15:40
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception\ValidationException;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception\ValidationException;
 
 /**
  * Class ItemCollectionParameter
- * @package Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter
+ * @package RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter
  */
 class ItemCollectionParameter extends AbstractParameter
 {

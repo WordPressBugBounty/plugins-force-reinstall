@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * Exception that is set as the reason for a promise that has been cancelled.

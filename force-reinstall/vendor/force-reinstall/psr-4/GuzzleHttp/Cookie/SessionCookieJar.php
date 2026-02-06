@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
 
 /**
  * Persists cookies in the client session

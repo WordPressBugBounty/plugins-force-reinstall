@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
 
 /**
  * Describes a data stream.

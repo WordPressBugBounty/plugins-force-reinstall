@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ServerRequestFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ServerRequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriFactoryInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ServerRequestFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ServerRequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UploadedFileInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriFactoryInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * Implements all of the PSR-17 interfaces.
@@ -23,20 +23,14 @@ use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
  * Note: in consuming code it is recommended to require the implemented interfaces
  * and inject the instance of this class multiple times.
  */
-final class HttpFactory implements
-    RequestFactoryInterface,
-    ResponseFactoryInterface,
-    ServerRequestFactoryInterface,
-    StreamFactoryInterface,
-    UploadedFileFactoryInterface,
-    UriFactoryInterface
+final class HttpFactory implements RequestFactoryInterface, ResponseFactoryInterface, ServerRequestFactoryInterface, StreamFactoryInterface, UploadedFileFactoryInterface, UriFactoryInterface
 {
     public function createUploadedFile(
         StreamInterface $stream,
-        int $size = null,
+        ?int $size = null,
         int $error = \UPLOAD_ERR_OK,
-        string $clientFilename = null,
-        string $clientMediaType = null
+        ?string $clientFilename = null,
+        ?string $clientMediaType = null
     ): UploadedFileInterface {
         if ($size === null) {
             $size = $stream->getSize();

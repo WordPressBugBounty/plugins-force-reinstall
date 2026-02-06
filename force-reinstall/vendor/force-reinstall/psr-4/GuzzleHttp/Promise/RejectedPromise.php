@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * A promise that has been rejected.
@@ -31,8 +31,8 @@ class RejectedPromise implements PromiseInterface
     }
 
     public function then(
-        callable $onFulfilled = null,
-        callable $onRejected = null
+        ?callable $onFulfilled = null,
+        ?callable $onRejected = null
     ): PromiseInterface {
         // If there's no onRejected callback then just return self.
         if (!$onRejected) {

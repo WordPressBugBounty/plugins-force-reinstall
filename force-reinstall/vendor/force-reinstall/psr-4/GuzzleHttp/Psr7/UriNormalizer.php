@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * Provides methods to normalize and compare URIs.
  *
  * @author Tobias Schultze
  *
- * @link https://tools.ietf.org/html/rfc3986#section-6
+ * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6
  */
 final class UriNormalizer
 {
@@ -58,7 +58,7 @@ final class UriNormalizer
      * All of `file:/myfile`, `file:///myfile`, and `file://localhost/myfile`
      * are equivalent according to RFC 3986. The first format is not accepted
      * by PHPs stream functions and thus already normalized implicitly to the
-     * second format in the Uri class. See `Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Uri::composeComponents`.
+     * second format in the Uri class. See `RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Uri::composeComponents`.
      *
      * Example: file://localhost/myfile → file:///myfile
      */
@@ -119,7 +119,7 @@ final class UriNormalizer
      * @param UriInterface $uri   The URI to normalize
      * @param int          $flags A bitmask of normalizations to apply, see constants
      *
-     * @link https://tools.ietf.org/html/rfc3986#section-6.2
+     * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6.2
      */
     public static function normalize(UriInterface $uri, int $flags = self::PRESERVING_NORMALIZATIONS): UriInterface
     {
@@ -131,8 +131,8 @@ final class UriNormalizer
             $uri = self::decodeUnreservedCharacters($uri);
         }
 
-        if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === '' &&
-            ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
+        if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === ''
+            && ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')
         ) {
             $uri = $uri->withPath('/');
         }
@@ -174,7 +174,7 @@ final class UriNormalizer
      * @param UriInterface $uri2           An URI to compare
      * @param int          $normalizations A bitmask of normalizations to apply, see constants
      *
-     * @link https://tools.ietf.org/html/rfc3986#section-6.1
+     * @see https://datatracker.ietf.org/doc/html/rfc3986#section-6.1
      */
     public static function isEquivalent(UriInterface $uri1, UriInterface $uri2, int $normalizations = self::PRESERVING_NORMALIZATIONS): bool
     {
@@ -185,7 +185,7 @@ final class UriNormalizer
     {
         $regex = '/(?:%[A-Fa-f0-9]{2})++/';
 
-        $callback = function (array $match) {
+        $callback = function (array $match): string {
             return strtoupper($match[0]);
         };
 
@@ -201,7 +201,7 @@ final class UriNormalizer
     {
         $regex = '/%(?:2D|2E|5F|7E|3[0-9]|[46][1-9A-F]|[57][0-9A])/i';
 
-        $callback = function (array $match) {
+        $callback = function (array $match): string {
             return rawurldecode($match[0]);
         };
 

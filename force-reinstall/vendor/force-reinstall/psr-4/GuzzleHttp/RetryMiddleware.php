@@ -1,11 +1,11 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 /**
  * Middleware that retries requests based on the boolean result of
@@ -40,7 +40,7 @@ class RetryMiddleware
      *                                                                         and returns the number of
      *                                                                         milliseconds to delay.
      */
-    public function __construct(callable $decider, callable $nextHandler, callable $delay = null)
+    public function __construct(callable $decider, callable $nextHandler, ?callable $delay = null)
     {
         $this->decider = $decider;
         $this->nextHandler = $nextHandler;
@@ -110,7 +110,7 @@ class RetryMiddleware
         };
     }
 
-    private function doRetry(RequestInterface $request, array $options, ResponseInterface $response = null): PromiseInterface
+    private function doRetry(RequestInterface $request, array $options, ?ResponseInterface $response = null): PromiseInterface
     {
         $options['delay'] = ($this->delay)(++$options['retries'], $response, $request);
 

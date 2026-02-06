@@ -5,15 +5,15 @@
  * Time: 13:52
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter\AbstractParameter;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum\ErrorCode;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception\ValidationException;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter\AbstractParameter;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Enum\ErrorCode;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception\ValidationException;
 
 /**
  * Class SearchEvent
- * @package Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event
+ * @package RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event
  * @method string getSearchTerm()
  * @method SearchEvent setSearchTerm(string $searchTerm)
  */

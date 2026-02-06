@@ -5,13 +5,13 @@
  * Time: 13:33
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter\AbstractParameter;
+use RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Parameter\AbstractParameter;
 
 /**
  * Class ViewItemListEvent
- * @package Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event
+ * @package RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Dto\Event
  * @method string getItemListId()
  * @method ViewItemListEvent setItemListId(string $itemListId)
  * @method string getItemListName()

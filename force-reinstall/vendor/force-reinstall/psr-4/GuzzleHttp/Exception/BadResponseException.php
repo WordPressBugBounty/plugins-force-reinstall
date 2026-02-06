@@ -1,9 +1,9 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 /**
  * Exception when an HTTP error occurs (4xx or 5xx error)
@@ -14,7 +14,7 @@ class BadResponseException extends RequestException
         string $message,
         RequestInterface $request,
         ResponseInterface $response,
-        \Throwable $previous = null,
+        ?\Throwable $previous = null,
         array $handlerContext = []
     ) {
         parent::__construct($message, $request, $response, $previous, $handlerContext);

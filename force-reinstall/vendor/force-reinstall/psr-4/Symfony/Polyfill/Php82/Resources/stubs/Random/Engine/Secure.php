@@ -11,7 +11,7 @@
 
 namespace Random\Engine;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82 as p;
+use RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82 as p;
 
 if (\PHP_VERSION_ID < 80200) {
     final class Secure extends p\Random\Engine\Secure implements \Random\CryptoSafeEngine

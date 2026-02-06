@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
 
 /**
  * Provides a buffer stream that can be written to to fill a buffer, and read
@@ -134,8 +134,6 @@ final class BufferStream implements StreamInterface
     }
 
     /**
-     * {@inheritdoc}
-     *
      * @return mixed
      */
     public function getMetadata($key = null)

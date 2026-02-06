@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
 
 /**
  * Exception when a server error is encountered (5xx codes)

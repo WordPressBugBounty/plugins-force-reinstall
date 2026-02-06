@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
 
 /**
  * HTTP messages consist of requests from a client to a server and responses

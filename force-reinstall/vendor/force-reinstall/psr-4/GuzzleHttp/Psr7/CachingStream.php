@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
 
 /**
  * Stream decorator that can cache previously read bytes from a sequentially
@@ -33,7 +33,7 @@ final class CachingStream implements StreamInterface
      */
     public function __construct(
         StreamInterface $stream,
-        StreamInterface $target = null
+        ?StreamInterface $target = null
     ) {
         $this->remoteStream = $stream;
         $this->stream = $target ?: new Stream(Utils::tryFopen('php://temp', 'r+'));

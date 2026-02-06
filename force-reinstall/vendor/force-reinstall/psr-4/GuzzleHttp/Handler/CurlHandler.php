@@ -1,9 +1,9 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 /**
  * HTTP handler that uses cURL easy handles as a transport layer.

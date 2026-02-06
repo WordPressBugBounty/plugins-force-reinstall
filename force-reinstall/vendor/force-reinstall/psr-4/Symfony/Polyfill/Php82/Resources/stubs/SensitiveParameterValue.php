@@ -10,7 +10,7 @@
  */
 
 if (\PHP_VERSION_ID < 80200) {
-    final class SensitiveParameterValue extends Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\SensitiveParameterValue
+    final class SensitiveParameterValue extends RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\SensitiveParameterValue
     {
     }
 }

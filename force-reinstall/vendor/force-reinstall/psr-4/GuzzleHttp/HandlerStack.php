@@ -1,10 +1,10 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 /**
  * Creates a composed Guzzle handler function by stacking middlewares on top of
@@ -58,7 +58,7 @@ class HandlerStack
     /**
      * @param (callable(RequestInterface, array): PromiseInterface)|null $handler Underlying HTTP handler.
      */
-    public function __construct(callable $handler = null)
+    public function __construct(?callable $handler = null)
     {
         $this->handler = $handler;
     }

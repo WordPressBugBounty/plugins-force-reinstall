@@ -1,19 +1,19 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\BadResponseException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\TooManyRedirectsException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\BadResponseException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\TooManyRedirectsException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * Request redirect middleware.
  *
  * Apply this middleware like other middleware using
- * {@see \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Middleware::redirect()}.
+ * {@see \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Middleware::redirect()}.
  *
  * @final
  */
@@ -166,8 +166,8 @@ class RedirectMiddleware
         // not forcing RFC compliance, but rather emulating what all browsers
         // would do.
         $statusCode = $response->getStatusCode();
-        if ($statusCode == 303 ||
-            ($statusCode <= 302 && !$options['allow_redirects']['strict'])
+        if ($statusCode == 303
+            || ($statusCode <= 302 && !$options['allow_redirects']['strict'])
         ) {
             $safeMethods = ['GET', 'HEAD', 'OPTIONS'];
             $requestMethod = $request->getMethod();

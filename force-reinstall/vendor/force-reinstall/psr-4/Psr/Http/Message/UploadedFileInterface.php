@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
 
 /**
  * Value object representing a file uploaded through an HTTP request.

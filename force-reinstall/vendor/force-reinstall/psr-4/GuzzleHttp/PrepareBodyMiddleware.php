@@ -1,9 +1,9 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 /**
  * Prepares requests that contain a body, adding the Content-Length,
@@ -76,8 +76,8 @@ class PrepareBodyMiddleware
 
         $expect = $options['expect'] ?? null;
 
-        // Return if disabled or if you're not using HTTP/1.1 or HTTP/2.0
-        if ($expect === false || $request->getProtocolVersion() < 1.1) {
+        // Return if disabled or using HTTP/1.0
+        if ($expect === false || $request->getProtocolVersion() === '1.0') {
             return;
         }
 

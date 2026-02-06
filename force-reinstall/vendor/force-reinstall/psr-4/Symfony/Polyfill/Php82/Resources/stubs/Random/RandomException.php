@@ -11,7 +11,7 @@
 
 namespace Random;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\NoDynamicProperties;
+use RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\NoDynamicProperties;
 
 if (\PHP_VERSION_ID < 80200) {
     class RandomException extends \Exception

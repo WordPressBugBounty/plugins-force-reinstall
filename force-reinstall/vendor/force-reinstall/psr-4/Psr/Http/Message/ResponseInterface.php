@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message;
 
 /**
  * Representation of an outgoing, server-side response.

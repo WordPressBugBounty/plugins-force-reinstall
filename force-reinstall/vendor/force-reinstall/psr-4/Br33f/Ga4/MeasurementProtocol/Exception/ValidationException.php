@@ -5,7 +5,7 @@
  * Time: 11:20
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Br33f\Ga4\MeasurementProtocol\Exception;
 
 use Exception;
 use Throwable;
@@ -17,7 +17,7 @@ class ValidationException extends AnalyticsException
      */
     protected $fieldName = null;
 
-    public function __construct($message = "", $code = 0, $fieldName = null, Throwable $previous = null)
+    public function __construct($message = "", $code = 0, $fieldName = null, ?Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
 

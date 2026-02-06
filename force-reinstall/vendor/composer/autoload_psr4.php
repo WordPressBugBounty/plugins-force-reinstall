@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Rich4rdMuvirimi\\ForceReinstall\\Vendor\\' => array($vendorDir . '/force-reinstall/psr-4'),
-    'Rich4rdMuvirimi\\ForceReinstall\\' => array($baseDir . '/src'),
+    'RichardMuvirimi\\ForceReinstall\\Vendor\\' => array($vendorDir . '/force-reinstall/psr-4'),
+    'RichardMuvirimi\\ForceReinstall\\' => array($baseDir . '/src'),
 );

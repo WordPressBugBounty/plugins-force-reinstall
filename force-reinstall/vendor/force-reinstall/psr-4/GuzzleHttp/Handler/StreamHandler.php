@@ -1,19 +1,19 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\ConnectException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\RequestException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\FulfilledPromise;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\TransferStats;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\ConnectException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\RequestException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\FulfilledPromise;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\TransferStats;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\StreamInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 /**
  * HTTP handler that uses PHP's HTTP stream wrapper.
@@ -40,6 +40,12 @@ class StreamHandler
             \usleep($options['delay'] * 1000);
         }
 
+        $protocolVersion = $request->getProtocolVersion();
+
+        if ('1.0' !== $protocolVersion && '1.1' !== $protocolVersion) {
+            throw new ConnectException(sprintf('HTTP/%s is not supported by the stream handler.', $protocolVersion), $request);
+        }
+
         $startTime = isset($options['on_stats']) ? Utils::currentTime() : null;
 
         try {
@@ -47,8 +53,14 @@ class StreamHandler
             $request = $request->withoutHeader('Expect');
 
             // Append a content-length header if body size is zero to match
-            // cURL's behavior.
-            if (0 === $request->getBody()->getSize()) {
+            // the behavior of `CurlHandler`
+            if (
+                (
+                    0 === \strcasecmp('PUT', $request->getMethod())
+                    || 0 === \strcasecmp('POST', $request->getMethod())
+                )
+                && 0 === $request->getBody()->getSize()
+            ) {
                 $request = $request->withHeader('Content-Length', '0');
             }
 
@@ -83,8 +95,8 @@ class StreamHandler
         array $options,
         RequestInterface $request,
         ?float $startTime,
-        ResponseInterface $response = null,
-        \Throwable $error = null
+        ?ResponseInterface $response = null,
+        ?\Throwable $error = null
     ): void {
         if (isset($options['on_stats'])) {
             $stats = new TransferStats($request, $response, Utils::currentTime() - $startTime, $error, []);
@@ -273,7 +285,7 @@ class StreamHandler
 
         // HTTP/1.1 streams using the PHP stream wrapper require a
         // Connection: close header
-        if ($request->getProtocolVersion() == '1.1'
+        if ($request->getProtocolVersion() === '1.1'
             && !$request->hasHeader('Connection')
         ) {
             $request = $request->withHeader('Connection', 'close');
@@ -321,8 +333,15 @@ class StreamHandler
         );
 
         return $this->createResource(
-            function () use ($uri, &$http_response_header, $contextResource, $context, $options, $request) {
+            function () use ($uri, $contextResource, $context, $options, $request) {
                 $resource = @\fopen((string) $uri, 'r', false, $contextResource);
+
+                // See https://wiki.php.net/rfc/deprecations_php_8_5#deprecate_the_http_response_header_predefined_variable
+                if (function_exists('http_get_last_response_headers')) {
+                    /** @var array|null */
+                    $http_response_header = \http_get_last_response_headers();
+                }
+
                 $this->lastHeaders = $http_response_header ?? [];
 
                 if (false === $resource) {

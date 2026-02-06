@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php74;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php74;
 
 /**
  * @author Ion Bazan <ion.bazan@gmail.com>

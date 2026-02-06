@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php81 as p;
+use RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php81 as p;
 
 if (\PHP_VERSION_ID >= 80100) {
     return;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 final class Create
 {

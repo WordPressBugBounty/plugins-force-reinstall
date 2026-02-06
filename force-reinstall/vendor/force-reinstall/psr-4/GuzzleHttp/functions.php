@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
 /**
  * Debug function used to describe the provided value type and class.
@@ -50,7 +50,7 @@ function debug_resource($value = null)
  *
  * The returned handler is not wrapped by any default middlewares.
  *
- * @return callable(\Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface, array): \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system.
+ * @return callable(\RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface, array): Promise\PromiseInterface Returns the best handler for the given system.
  *
  * @throws \RuntimeException if no viable Handler is available.
  *

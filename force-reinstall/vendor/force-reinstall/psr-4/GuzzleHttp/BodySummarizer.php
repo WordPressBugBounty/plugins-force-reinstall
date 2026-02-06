@@ -1,8 +1,8 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\MessageInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\MessageInterface;
 
 final class BodySummarizer implements BodySummarizerInterface
 {
@@ -11,7 +11,7 @@ final class BodySummarizer implements BodySummarizerInterface
      */
     private $truncateAt;
 
-    public function __construct(int $truncateAt = null)
+    public function __construct(?int $truncateAt = null)
     {
         $this->truncateAt = $truncateAt;
     }
@@ -22,7 +22,7 @@ final class BodySummarizer implements BodySummarizerInterface
     public function summarize(MessageInterface $message): ?string
     {
         return $this->truncateAt === null
-            ? \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Message::bodySummary($message)
-            : \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Message::bodySummary($message, $this->truncateAt);
+            ? Psr7\Message::bodySummary($message)
+            : Psr7\Message::bodySummary($message, $this->truncateAt);
     }
 }

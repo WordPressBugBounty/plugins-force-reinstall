@@ -1,13 +1,12 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\BodySummarizer;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\BodySummarizerInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\RequestExceptionInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\BodySummarizer;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\BodySummarizerInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\RequestExceptionInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 /**
  * HTTP Request exception
@@ -32,8 +31,8 @@ class RequestException extends TransferException implements RequestExceptionInte
     public function __construct(
         string $message,
         RequestInterface $request,
-        ResponseInterface $response = null,
-        \Throwable $previous = null,
+        ?ResponseInterface $response = null,
+        ?\Throwable $previous = null,
         array $handlerContext = []
     ) {
         // Set the code of the exception if the response is set and not future.
@@ -63,10 +62,10 @@ class RequestException extends TransferException implements RequestExceptionInte
      */
     public static function create(
         RequestInterface $request,
-        ResponseInterface $response = null,
-        \Throwable $previous = null,
+        ?ResponseInterface $response = null,
+        ?\Throwable $previous = null,
         array $handlerContext = [],
-        BodySummarizerInterface $bodySummarizer = null
+        ?BodySummarizerInterface $bodySummarizer = null
     ): self {
         if (!$response) {
             return new self(
@@ -90,8 +89,7 @@ class RequestException extends TransferException implements RequestExceptionInte
             $className = __CLASS__;
         }
 
-        $uri = $request->getUri();
-        $uri = static::obfuscateUri($uri);
+        $uri = \RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Utils::redactUserInfo($request->getUri());
 
         // Client Error: `GET /` resulted in a `404 Not Found` response:
         // <html> ... (truncated)
@@ -111,20 +109,6 @@ class RequestException extends TransferException implements RequestExceptionInte
         }
 
         return new $className($message, $request, $response, $previous, $handlerContext);
-    }
-
-    /**
-     * Obfuscates URI if there is a username and a password present
-     */
-    private static function obfuscateUri(UriInterface $uri): UriInterface
-    {
-        $userInfo = $uri->getUserInfo();
-
-        if (false !== ($pos = \strpos($userInfo, ':'))) {
-            return $uri->withUserInfo(\substr($userInfo, 0, $pos), '***');
-        }
-
-        return $uri;
     }
 
     /**

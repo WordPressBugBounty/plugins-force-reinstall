@@ -1,9 +1,9 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\NetworkExceptionInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\NetworkExceptionInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 /**
  * Exception thrown when a connection cannot be established.
@@ -25,7 +25,7 @@ class ConnectException extends TransferException implements NetworkExceptionInte
     public function __construct(
         string $message,
         RequestInterface $request,
-        \Throwable $previous = null,
+        ?\Throwable $previous = null,
         array $handlerContext = []
     ) {
         parent::__construct($message, 0, $previous);

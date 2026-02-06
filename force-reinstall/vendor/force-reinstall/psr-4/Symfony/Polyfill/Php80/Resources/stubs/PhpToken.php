@@ -10,7 +10,7 @@
  */
 
 if (\PHP_VERSION_ID < 80000 && extension_loaded('tokenizer')) {
-    class PhpToken extends Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php80\PhpToken
+    class PhpToken extends RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php80\PhpToken
     {
     }
 }

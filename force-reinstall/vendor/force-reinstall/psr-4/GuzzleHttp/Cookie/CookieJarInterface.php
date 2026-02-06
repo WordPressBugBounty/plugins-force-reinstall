@@ -1,9 +1,9 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
 
 /**
  * Stores HTTP cookies.
@@ -14,6 +14,7 @@ use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\ResponseInterface;
  * cookies from a file, database, etc.
  *
  * @see https://docs.python.org/2/library/cookielib.html Inspiration
+ *
  * @extends \IteratorAggregate<SetCookie>
  */
 interface CookieJarInterface extends \Countable, \IteratorAggregate

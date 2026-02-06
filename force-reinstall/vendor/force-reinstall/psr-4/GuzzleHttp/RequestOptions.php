@@ -1,13 +1,11 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
 /**
  * This class contains a list of built-in Guzzle request options.
  *
- * More documentation for each option can be found at http://guzzlephp.org/.
- *
- * @see http://docs.guzzlephp.org/en/v6/request-options.html
+ * @see https://docs.guzzlephp.org/en/latest/request-options.html
  */
 final class RequestOptions
 {
@@ -59,11 +57,11 @@ final class RequestOptions
     public const CERT = 'cert';
 
     /**
-     * cookies: (bool|Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie\CookieJarInterface, default=false)
+     * cookies: (bool|RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie\CookieJarInterface, default=false)
      * Specifies whether or not cookies are used in a request or what cookie
      * jar to use or what cookies to send. This option only works if your
      * handler has the `cookie` middleware. Valid values are `false` and
-     * an instance of {@see \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie\CookieJarInterface}.
+     * an instance of {@see Cookie\CookieJarInterface}.
      */
     public const COOKIES = 'cookies';
 

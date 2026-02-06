@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82;
 
 /**
  * @author Tim Düsterhus <duesterhus@woltlab.com>

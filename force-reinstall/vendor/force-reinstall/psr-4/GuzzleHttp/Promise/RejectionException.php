@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * A special exception that is thrown when waiting on a rejected promise.
@@ -18,7 +18,7 @@ class RejectionException extends \RuntimeException
      * @param mixed       $reason      Rejection reason.
      * @param string|null $description Optional description.
      */
-    public function __construct($reason, $description = null)
+    public function __construct($reason, ?string $description = null)
     {
         $this->reason = $reason;
 

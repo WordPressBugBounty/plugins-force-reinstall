@@ -1,13 +1,13 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\InvalidArgumentException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\CurlHandler;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\CurlMultiHandler;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\Proxy;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\StreamHandler;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception\InvalidArgumentException;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\CurlHandler;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\CurlMultiHandler;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\Proxy;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Handler\StreamHandler;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\UriInterface;
 
 final class Utils
 {
@@ -71,7 +71,7 @@ final class Utils
             return \STDOUT;
         }
 
-        return \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Psr7\Utils::tryFopen('php://output', 'w');
+        return Psr7\Utils::tryFopen('php://output', 'w');
     }
 
     /**
@@ -79,7 +79,7 @@ final class Utils
      *
      * The returned handler is not wrapped by any default middlewares.
      *
-     * @return callable(\Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface, array): \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface Returns the best handler for the given system.
+     * @return callable(\RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface, array): Promise\PromiseInterface Returns the best handler for the given system.
      *
      * @throws \RuntimeException if no viable Handler is available.
      */
@@ -87,7 +87,7 @@ final class Utils
     {
         $handler = null;
 
-        if (\defined('CURLOPT_CUSTOMREQUEST')) {
+        if (\defined('CURLOPT_CUSTOMREQUEST') && \function_exists('curl_version') && version_compare(curl_version()['version'], '7.21.2') >= 0) {
             if (\function_exists('curl_multi_exec') && \function_exists('curl_exec')) {
                 $handler = Proxy::wrapSync(new CurlMultiHandler(), new CurlHandler());
             } elseif (\function_exists('curl_exec')) {
@@ -102,7 +102,7 @@ final class Utils
                 ? Proxy::wrapStreaming($handler, new StreamHandler())
                 : new StreamHandler();
         } elseif (!$handler) {
-            throw new \RuntimeException('Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp requires cURL, the allow_url_fopen ini setting, or a custom HTTP handler.');
+            throw new \RuntimeException('RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp requires cURL, the allow_url_fopen ini setting, or a custom HTTP handler.');
         }
 
         return $handler;
@@ -176,14 +176,13 @@ No system CA bundle could be found in any of the the common system locations.
 PHP versions earlier than 5.6 are not properly configured to use the system's
 CA bundle by default. In order to verify peer certificates, you will need to
 supply the path on disk to a certificate bundle to the 'verify' request
-option: http://docs.guzzlephp.org/en/latest/clients.html#verify. If you do not
-need a specific certificate bundle, then Mozilla provides a commonly used CA
-bundle which can be downloaded here (provided by the maintainer of cURL):
-https://curl.haxx.se/ca/cacert.pem. Once
-you have a CA bundle available on disk, you can set the 'openssl.cafile' PHP
-ini setting to point to the path to the file, allowing you to omit the 'verify'
-request option. See https://curl.haxx.se/docs/sslcerts.html for more
-information.
+option: https://docs.guzzlephp.org/en/latest/request-options.html#verify. If
+you do not need a specific certificate bundle, then Mozilla provides a commonly
+used CA bundle which can be downloaded here (provided by the maintainer of
+cURL): https://curl.haxx.se/ca/cacert.pem. Once you have a CA bundle available
+on disk, you can set the 'openssl.cafile' PHP ini setting to point to the path
+to the file, allowing you to omit the 'verify' request option. See
+https://curl.haxx.se/docs/sslcerts.html for more information.
 EOT
         );
     }

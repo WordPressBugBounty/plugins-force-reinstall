@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\Random\Engine;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\Random\Engine;
 
 use Random\RandomException;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\NoDynamicProperties;
+use RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php82\NoDynamicProperties;
 
 /**
  * @author Tim Düsterhus <tim@bastelstu.be>

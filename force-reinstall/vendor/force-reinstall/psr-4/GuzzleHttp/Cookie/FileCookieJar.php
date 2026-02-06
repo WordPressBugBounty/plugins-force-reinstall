@@ -1,8 +1,8 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Cookie;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Utils;
 
 /**
  * Persists non-session cookies using a JSON formatted file

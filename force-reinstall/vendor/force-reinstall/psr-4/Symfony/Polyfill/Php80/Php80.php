@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php80;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Symfony\Polyfill\Php80;
 
 /**
  * @author Ion Bazan <ion.bazan@gmail.com>

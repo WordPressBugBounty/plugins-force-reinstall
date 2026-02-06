@@ -1,8 +1,8 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Exception;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\ClientExceptionInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client\ClientExceptionInterface;
 
 interface GuzzleException extends ClientExceptionInterface
 {

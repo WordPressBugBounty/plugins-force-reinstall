@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 final class Utils
 {
@@ -15,13 +15,13 @@ final class Utils
      *
      * <code>
      * while ($eventLoop->isRunning()) {
-     *     Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\Utils::queue()->run();
+     *     RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\Utils::queue()->run();
      * }
      * </code>
      *
      * @param TaskQueueInterface|null $assign Optionally specify a new queue instance.
      */
-    public static function queue(TaskQueueInterface $assign = null): TaskQueueInterface
+    public static function queue(?TaskQueueInterface $assign = null): TaskQueueInterface
     {
         static $queue;
 
@@ -144,7 +144,9 @@ final class Utils
                 $results[$idx] = $value;
             },
             function ($reason, $idx, Promise $aggregate): void {
-                $aggregate->reject($reason);
+                if (Is::pending($aggregate)) {
+                    $aggregate->reject($reason);
+                }
             }
         )->then(function () use (&$results) {
             ksort($results);

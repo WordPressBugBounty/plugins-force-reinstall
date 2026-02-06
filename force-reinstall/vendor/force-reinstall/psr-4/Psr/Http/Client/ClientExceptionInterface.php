@@ -1,6 +1,6 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Client;
+namespace RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Client;
 
 /**
  * Every HTTP client related exception MUST implement this interface.

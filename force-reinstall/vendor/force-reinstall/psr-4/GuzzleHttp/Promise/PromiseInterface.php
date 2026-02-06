@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * A promise represents the eventual result of an asynchronous operation.
@@ -27,8 +27,8 @@ interface PromiseInterface
      * @param callable $onRejected  Invoked when the promise is rejected.
      */
     public function then(
-        callable $onFulfilled = null,
-        callable $onRejected = null
+        ?callable $onFulfilled = null,
+        ?callable $onRejected = null
     ): PromiseInterface;
 
     /**

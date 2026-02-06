@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
 
 /**
  * A task queue that executes tasks in a FIFO order.
@@ -11,7 +11,7 @@ namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise;
  * maintains a constant stack size. You can use the task queue asynchronously
  * by calling the `run()` function of the global task queue in an event loop.
  *
- *     Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\Utils::queue()->run();
+ *     RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\Utils::queue()->run();
  *
  * @final
  */

@@ -1,12 +1,12 @@
 <?php
 
-namespace Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
+namespace RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp;
 
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\EachPromise;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromisorInterface;
-use Rich4rdMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise as P;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\EachPromise;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromiseInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Promise\PromisorInterface;
+use RichardMuvirimi\ForceReinstall\Vendor\Psr\Http\Message\RequestInterface;
 
 /**
  * Sends an iterator of requests concurrently using a capped pool size.
@@ -86,7 +86,7 @@ class Pool implements PromisorInterface
      * @param ClientInterface $client   Client used to send the requests
      * @param array|\Iterator $requests Requests to send concurrently.
      * @param array           $options  Passes through the options available in
-     *                                  {@see \Rich4rdMuvirimi\ForceReinstall\Vendor\GuzzleHttp\Pool::__construct}
+     *                                  {@see Pool::__construct}
      *
      * @return array Returns an array containing the response or an exception
      *               in the same order that the requests were sent.
